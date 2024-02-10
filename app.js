@@ -53,6 +53,10 @@ window.onload = function() {
 
 // Main function
 function sheSaidYes() {
+
+    // Play the audio
+    var music = document.getElementById("bg");
+    music.play();
     
     // Dissapear buttons after clicking "Yes" (no other option :3)
     dissapearButtons();
