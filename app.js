@@ -52,12 +52,21 @@ window.onload = function() {
 
 // ------------------------------
 
+// Get the button element
+var questionButton = document.getElementById("questionButton");
+
+// Add an event listener to the button
+questionButton.addEventListener('click', function() {
+    // Play the audio
+    var music = document.getElementById("bg");
+    music.play();
+
+    // Hide the button
+    questionButton.style.display = "none";
+});
+
 // Main function
 function sheSaidYes() {
-
-    // Play the audio
-    music.play();
-    
     // Dissapear buttons after clicking "Yes" (no other option :3)
     dissapearButtons();
     
