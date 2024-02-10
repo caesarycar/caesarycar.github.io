@@ -1,0 +1,175 @@
+
+/* ROTATING SLIGHTLY animation */
+@keyframes rotateSlightly {
+    0% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes rotateImageStart {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-10deg);
+    }
+}
+
+/* CUPID to the left animation */
+@keyframes cupidAnimation1 {
+    0% {
+        transform: scaleX(-1) scale(0.2) translate(-120vh, 0vh) rotate(30deg);
+        opacity: 0.8;
+        visibility: visible;
+    }
+    50% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        transform: scaleX(-1) scale(0.2) translate(1200vh, 0vh) rotate(10deg);
+        opacity: 0.2;
+        visibility: visible;
+    }
+}
+
+/* CUPID to the right animation */
+@keyframes cupidAnimation2 {
+    0% {
+        transform: scaleX(1) scale(0.2) translate(-120vh, 0vh) rotate(30deg);
+        opacity: 0.8;
+        visibility: visible;
+    }
+    50% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        transform: scaleX(1) scale(0.2) translate(1200vh, 0vh) rotate(10deg);
+        opacity: 0.2;
+        visibility: visible;
+    }
+}
+
+/* Sliding IN from RIGHT */
+@keyframes slideInFromRight {
+    from {
+        right: -50vh;
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(1);
+        opacity: 1;
+    }
+}
+
+/* Sliding IN from LEFT animation */
+@keyframes slideInFromLeft {
+    from {
+        left: -100vh;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Sliding OUT to LEFT animation */
+@keyframes slideOutToLeft {
+    from {
+        opacity: 1;
+    }
+    
+    to {
+        left: -100vh;
+        opacity: 0;
+    }
+}
+
+
+/* Sliding UP animation */
+@keyframes slideUp {
+    from {
+        bottom: -50vh;
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Sliding DOWN animation */
+@keyframes slideDown {
+    from {
+        opacity: 0.3;
+        top: -50vh;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* HOVERING animation for thinking Kuromi */
+@keyframes HoveringThinking {
+    50% {
+        bottom: 9.5vh;
+    }
+}
+
+/* HOVERING animation for window Kuromi */
+@keyframes HoveringWindow {
+    50% {
+        top: 1vh;
+    }
+}
+
+/* Fading OUT only animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Fading IN only animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* FALLING hearts animation */
+@keyframes fall {
+    0% {
+        transform: translateY(calc(-20vh)), rotate(--rotation);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(calc(120vh)); /* Move the heart to the bottom of the screen */
+        opacity: 0;
+    }
+}
+
+/* FADDING hearts animation */
+@keyframes fadeHeart {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}

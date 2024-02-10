@@ -1,0 +1,93 @@
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #fce8f0;
+    background: linear-gradient(to top, #fce8f0, #ffbdd0, #fce8f0);
+    overflow: hidden;
+    position: relative;
+}
+
+audio {
+    display: none;
+}
+
+/* Hearts falling from the top */
+.heart {
+    --c: rgb(207, 60, 87);
+    width: 40px;
+    aspect-ratio: 1;
+    background:
+        radial-gradient(at 70% 31%, var(--c) 29%, #0000 30%),
+        radial-gradient(at 30% 31%, var(--c) 29%, #0000 30%),
+        linear-gradient(var(--c) 0 0) bottom/100% 50% no-repeat;
+    clip-path: polygon(-43% 0, 50% 91%, 143% 0);
+    position: absolute;
+}
+
+/* Styling for the fading hearts */
+.fading-heart {
+    --c: rgb(255, 170, 184);
+    width: 30px;
+    aspect-ratio: 1;
+    background:
+        radial-gradient(at 70% 31%, var(--c) 29%, #0000 30%),
+        radial-gradient(at 30% 31%, var(--c) 29%, #0000 30%),
+        linear-gradient(var(--c) 0 0) bottom/100% 50% no-repeat;
+    width: 30px;
+    aspect-ratio: 1;
+    position: absolute;
+    clip-path: polygon(-43% 0, 50% 91%, 143% 0);
+    z-index: -10;
+}
+
+/* Container with buttons */
+.container {
+    display: flex;
+}
+
+/* YES and NO option buttons */
+.option {
+    padding: 10px;
+    margin: 15px;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 150%;
+    font-weight: 655;
+    border: 2px solid #af7ba0;
+    color: #511345;
+    background-color: #ddc3d8;
+    border-radius: 7px;
+    transition: transform 0.5s;
+    animation: none;
+}
+
+/* Make YES bigger on hover */
+#yes:hover {
+animation-name: scaleUp;
+animation-duration: 0.3s;
+animation-direction: reverse;
+}
+
+/* Make NO run away on hover */
+#no.run-away {
+    animation: runAwayAnimation 0.5s ease forwards;
+    transform: translate(var(--dest-x), var(--dest-y));
+}
+
+/* Media query for small devices (phones) */
+@media screen and (max-width: 600px) {
+    .heart {
+        width: 15px;
+    }
+    .fading-heart {
+        width: 10px;
+    }
+    .option {
+        font-size: 100%;
+        text-align: center;
+    }
+}

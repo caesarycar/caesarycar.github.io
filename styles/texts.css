@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lovers+Quarrel&family=Parisienne&family=Playball&family=Roboto+Slab&family=Roboto:wght@500&family=Satisfy&family=Send+Flowers&display=swap');
+
+/* Fancy text with custom font */
+/* Invisible, then appears when clicking "YES" */
+.fancy-text {
+    font-size: 58px;
+    font-family: 'Send Flowers', cursive;
+    font-weight: 800;
+    color: #fdd1e4;
+    background-color: rgb(192, 82, 102);;
+    padding: 4px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 45vh;
+    transform: translate(-50%, 150%);
+    animation: slideUp 5s ease forwards;
+    opacity: 0;
+}
+
+/* Main header - "Will you be my valentine" */
+/* Visible, then dissapears when clicking "YES" */
+h1 {
+    position: absolute;
+    font-family: 'Send Flowers', cursive;
+    font-size: 50px;
+    color: #7c1638;
+    transform: translate(0vh, -12vh);
+    visibility: visible;
+    animation: none;
+}
+
+.option {
+    font-family: 'Playball', cursive;
+}
+
+/* Second header - below the Fancy Font */
+/* Invisible, then appears when clicking "YES" */
+h2 {
+    position: absolute;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 40px;
+    bottom: 6vh;
+    font-weight: 655;
+    color: #aa2b71;
+    visibility: hidden;
+    animation: none;
+}
+
+/* Media query for small devices (phones) */
+@media screen and (max-width: 600px) {
+    body {
+        overflow: hidden;
+    }
+
+    .fancy-text {
+        font-size: 28px;
+        width: 60%;
+        bottom: 52vh;
+        text-align: center;
+    }
+    h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+    h2 {
+        bottom: 30vh;
+        text-align: center;
+        font-size: 24px;
+    }
+}

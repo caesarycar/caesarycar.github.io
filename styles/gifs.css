@@ -1,0 +1,195 @@
+.bottom-kuromi-container {
+    position: absolute;
+    /* background-color: red; */
+    height: 50vh;
+    width: 100%;
+    bottom: 0;
+    z-index: -1;
+ 
+    /* Kuromi thinking gif */
+    #thinking {
+        position: absolute;
+        scale: 1.5;
+        bottom: 5em;
+        right: 5em;
+        animation: slideUp 3s ease forwards;
+    }   
+    
+    /* Kuromi PLS gif */
+    #kuromi-pls {
+        bottom: 3em;
+        left: 2em;
+        position: absolute;
+        scale: 110%;
+        animation: fadeIn 7s ease forwards;
+        visibility: visible;
+    }
+    
+    #kuromi-omg {
+        transform: scale(100%);
+        position: absolute;
+        bottom: 5vh;
+        left: 0vh;
+        visibility: hidden;
+    }
+    
+    #happy-kuromi-right {
+        position: absolute;
+        scale: 70%;
+        right: -4vh;
+        bottom: 40vh;
+        animation: none;
+        visibility: hidden;
+    }
+
+    #kuromi-thanks {
+        position: absolute;
+        right: 30vh;
+        scale: 75%;
+        bottom: 0;
+        visibility: hidden;
+        animation: none;
+    }
+
+    #kuromi-not-care {
+        position: absolute;
+        scale: 0.7;
+        bottom: 0vh;
+        left: 32vh;
+        visibility: hidden;
+        animation: none;
+    }
+}
+
+.top-kuromi-container {
+    background-color: aqua;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    
+    #cupid1 {
+        position: absolute;
+        top: -8em;
+        right: -15em;
+        visibility: hidden;
+        animation: none;
+    }
+
+    #cupid2 {
+        position: absolute;
+        top: -8em;
+        left: -15em;
+        visibility: hidden;
+        animation: none;
+    }
+
+    #kuromi-hope {
+        position: absolute;
+        right: 6vh;
+        top: 3vh;
+        scale: 110%;
+        visibility: hidden;
+        animation: none;
+    }
+    
+    #happy-kuromi-left {
+        position: absolute;
+        transform: scale(60%);
+        top: 8vh;
+        left: -10vh;
+        animation: none;
+        visibility: hidden;
+    }
+
+    #window-kuromi {
+        position: absolute;
+        scale: 1;
+        top: 0vh;
+        left: 8vh;
+        animation: none;
+        visibility: hidden;
+    }
+}
+
+/* Happy Kuromi gif */
+.gif-kuromi-happy {
+    position: absolute;
+    bottom: 47.2vh;
+    scale: 150%;
+    animation: none;
+    visibility: hidden;
+}
+
+/* Heart chain at the bottom */
+.heart-chain {
+    position: absolute;
+    bottom: 3vh;
+}
+
+/* Adjustments for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 600px) {
+    .bottom-kuromi-container {
+        height: 30vh;
+
+        #thinking {
+            scale: 0.6; 
+            bottom: 1em; 
+            right: -1em; 
+        }
+
+        #kuromi-pls {
+            bottom: 0em; 
+            left: -3em; 
+            scale: 50%; 
+        }
+
+        #kuromi-omg {
+            scale: 0.5;
+            bottom: 0;
+            left: -10vh;
+        }
+
+        #happy-kuromi-right {
+            display: none;
+        }
+
+        #kuromi-thanks {
+            display: none;
+        }
+
+        #kuromi-not-care {
+            display: none;
+        }
+    }
+
+    .top-kuromi-container {
+        height: 30vh;
+        background-color: transparent;
+
+        #kuromi-hope {
+            scale: 0.7;
+            right: 0;
+            top: 0;
+        }
+
+        #happy-kuromi-left {
+            display: none;
+        }
+
+        #window-kuromi {
+            scale: 0.7;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    .gif-kuromi-happy {
+        bottom: 45vh;
+        scale: 80%; 
+    }
+
+    .heart-chain {
+        bottom: 1vh;
+    }
+}
