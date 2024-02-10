@@ -42,8 +42,9 @@ setTimeout(() => {
 
 // ------------------------------
 
+var music = document.getElementById("bg");
+
 window.onload = function() {
-    var music = document.getElementById("bg-music");
     if (music.paused) {
         music.play();
     }
@@ -55,7 +56,6 @@ window.onload = function() {
 function sheSaidYes() {
 
     // Play the audio
-    var music = document.getElementById("bg");
     music.play();
     
     // Dissapear buttons after clicking "Yes" (no other option :3)
