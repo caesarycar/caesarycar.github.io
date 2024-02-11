@@ -47,6 +47,7 @@ audio {
 /* Container with buttons */
 .container {
     display: flex;
+    visibility: hidden;
 }
 
 /* YES and NO option buttons */
@@ -80,18 +81,20 @@ animation-direction: reverse;
 
 #questionButton {
     position: fixed;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px 40px;
-    font-size: 24px;
-    background-color: #ff6f61;
-    color: white;
+    scale: 1;
+    background-color: rgb(192, 82, 102);;
+    color: rgb(247, 218, 218);
+    color: 511345;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     z-index: 9999;
 }
+
 /* Media query for small devices (phones) */
 @media screen and (max-width: 600px) {
     .heart {

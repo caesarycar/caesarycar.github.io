@@ -27,46 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
     showFadingHearts();
 });
 
-// Make Thinking Kuromi float after it slides in the screen
-setTimeout(() => {
-    adjustAnimation("thinking", 4, "HoveringThinking", true, "ease-in-out", "infinite")
-}, 3000);
-
-// Make Window Kuromi float after appearing, after delay
-setTimeout(() => {
-    adjustAnimation("window-kuromi", 4, "slideDown");
-    setTimeout(() => {
-        adjustAnimation("window-kuromi", 4, "HoveringWindow", true, "ease-in-out", "infinite")
-    }, 4000);
-}, 3000);
-
 // ------------------------------
-
-var music = document.getElementById("bg");
-
-window.onload = function() {
-    if (music.paused) {
-        music.play();
-    }
-};
-
-// ------------------------------
-
-// Get the button element
-var questionButton = document.getElementById("questionButton");
-
-// Add an event listener to the button
-questionButton.addEventListener('click', function() {
-    // Play the audio
-    var music = document.getElementById("bg");
-    music.play();
-
-    // Hide the button
-    questionButton.style.display = "none";
-});
 
 // Main function
 function sheSaidYes() {
+    
     // Dissapear buttons after clicking "Yes" (no other option :3)
     dissapearButtons();
     
@@ -108,8 +73,54 @@ function sheSaidYes() {
     setInterval(showFallingHearts, 1700);
 }
 
+// ------------------------------
+
+var music = document.getElementById("bg");
+
+window.onload = function() {
+    if (music.paused) {
+        music.play();
+    }
+};
+
+// ------------------------------
+
+// Get the button element
+var questionButton = document.getElementById("questionButton");
+
+// Add an event listener to the button
+questionButton.addEventListener('click', function() {
+    // Play the audio
+    var music = document.getElementById("bg");
+    music.play();
+});
+
+function changeScene() {
+    adjustAnimation("will-you-be", 3, "fadeIn");
+    adjustAnimation("yes-no-buttons", 3, "fadeIn");
+    adjustAnimation("questionButton", 2, "fadeOut");
+
+    adjustAnimation("kuromi-pls", 7, "fadeIn");
+
+    adjustAnimation("thinking", 3, "slideUp", false, "ease", "forwards")
+    // Make Thinking Kuromi float after it slides in the screen
+    setTimeout(() => {
+        adjustAnimation("thinking", 4, "HoveringThinking", true, "ease-in-out", "infinite")
+    }, 3000);
+
+    // Make Window Kuromi float after appearing, after delay
+    setTimeout(() => {
+        adjustAnimation("window-kuromi", 4, "slideDown");
+        setTimeout(() => {
+            adjustAnimation("window-kuromi", 4, "HoveringWindow", true, "ease-in-out", "infinite")
+        }, 4000);
+    }, 3000);
+}
+
 // Add an event listener to the "Yes" button
 document.getElementById('yes').addEventListener('click', sheSaidYes);
 
 // Add an event listener to the "No" button
 document.getElementById('no').addEventListener('mouseover', runAway);
+
+document.getElementById('questionButton').addEventListener('click', changeScene)

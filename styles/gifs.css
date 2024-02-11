@@ -12,7 +12,8 @@
         scale: 1.5;
         bottom: 5em;
         right: 5em;
-        animation: slideUp 3s ease forwards;
+        animation: none;
+        visibility: hidden;
     }   
     
     /* Kuromi PLS gif */
@@ -21,8 +22,8 @@
         left: 2em;
         position: absolute;
         scale: 110%;
-        animation: fadeIn 7s ease forwards;
-        visibility: visible;
+        animation: none;
+        visibility: hidden;
     }
     
     #kuromi-omg {

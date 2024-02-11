@@ -8,7 +8,7 @@
     font-family: 'Send Flowers', cursive;
     font-weight: 800;
     color: #fdd1e4;
-    background-color: rgb(192, 82, 102);;
+    background-color: rgb(192, 82, 102);
     padding: 4px;
     border-radius: 20px;
     position: absolute;
@@ -26,7 +26,7 @@ h1 {
     font-size: 50px;
     color: #7c1638;
     transform: translate(0vh, -12vh);
-    visibility: visible;
+    visibility: hidden;
     animation: none;
 }
 
@@ -46,6 +46,11 @@ h2 {
     color: #aa2b71;
     visibility: hidden;
     animation: none;
+}
+
+#questionButton {
+    font-family: 'Playball', cursive;
+    font-size: 32px;
 }
 
 /* Media query for small devices (phones) */
