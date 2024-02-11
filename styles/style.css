@@ -56,9 +56,9 @@ audio {
     margin: 15px;
     cursor: pointer;
     font-size: 150%;
-    font-weight: 655;
+    font-weight: 555;
     border: none;
-    color: rgb(247, 218, 218);
+    color: #7c1638;
     background-color: rgb(192, 82, 102);
     border-radius: 7px;
     transition: transform 0.5s;
